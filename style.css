@@ -1,0 +1,295 @@
+/* ====================
+   General styles
+   ==================== */
+   * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.6;
+    color: #f4f4f4; /* Light text on dark background */
+    background-color: #1a1a1a; /* Dark background */
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 20px;
+}
+
+/* ====================
+   Header/nav
+   ==================== */
+header {
+    background: #222;
+    color: #fff;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 50px;
+}
+
+header .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+}
+
+header nav a {
+    color: #ccc;
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 20px;
+    transition: color 0.3s;
+}
+
+header nav a:hover {
+    color: #00aaff; /* Highlight color */
+}
+
+/* ====================
+   About Section
+   ==================== */
+#about {
+    background: #1a1a1a;
+    color: #f4f4f4;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 40px;
+}
+
+.profile-image img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%; /* Circular image */
+    object-fit: cover;
+    border: 5px solid #00aaff;
+    box-shadow: 0 0 20px rgba(0, 170, 255, 0.4);
+}
+
+.about-text {
+    max-width: 700px;
+}
+
+.about-text h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #00aaff;
+}
+
+.about-text p {
+    font-size: 1.2rem;
+    color: #b0b0b0;
+}
+
+/* Desktop Layout for About Section */
+@media (min-width: 768px) {
+    .about-content {
+        flex-direction: row;
+        text-align: left;
+        justify-content: center;
+    }
+    .about-text {
+        margin-left: 50px;
+    }
+}
+
+/* ====================
+   Projects ZOne
+   ==================== */
+#projects {
+    background: #222;
+    padding: 60px 0;
+    text-align: center;
+}
+
+#projects h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #00aaff;
+}
+
+#projects h2 {
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: 10px;
+    margin-top: 40px;
+}
+
+#projects h3 {
+    font-size: 1rem;
+    color: #ccc;
+    font-style: italic;
+    margin-bottom: 40px;
+}
+
+.project-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.project-item {
+    background: #2c2c2c;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    padding: 20px;
+    text-align: left;
+    transition: transform 0.3s;
+    flex: 1 1 45%; /* Two columns on big screens */
+    max-width: 45%;
+}
+
+.project-item:hover {
+    transform: translateY(-10px);
+}
+
+.project-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    margin-top: 15px;
+    display: block;
+}
+
+.project-item h3 {
+    font-size: 1.5rem;
+    color: #fff;
+    margin-bottom: 5px;
+    font-style: normal;
+}
+
+.project-item p {
+    font-size: 1rem;
+    color: #ccc;
+    margin: 10px 0 0;
+}
+
+/* Mobile Layout for Project Grid (Single Column) */
+@media (max-width: 768px) {
+    .project-item {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}
+
+/* ====================
+   Contact Section
+   Call me maybe
+   ==================== */
+#contact {
+    background: #1a1a1a;
+    padding: 80px 0;
+    text-align: center;
+}
+
+#contact h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #00aaff;
+}
+
+#contact p {
+    font-size: 1.1rem;
+    color: #b0b0b0;
+    margin-bottom: 40px;
+}
+
+.contact-details {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin: 40px auto 60px;
+    max-width: 800px;
+    flex-wrap: wrap;
+}
+
+.contact-item {
+    background: #222;
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid #333;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    flex: 1 1 300px;
+    max-width: 350px;
+    transition: background 0.3s;
+}
+
+.contact-item:hover {
+    background: #2c2c2c;
+}
+
+.contact-item i {
+    font-size: 2.5rem;
+    color: #00aaff;
+    margin-bottom: 15px;
+}
+
+.contact-item h3 {
+    font-size: 1.5rem;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.contact-item a {
+    color: #b0b0b0;
+    text-decoration: none;
+    font-size: 1.1rem;
+    word-break: break-all;
+    transition: color 0.3s;
+}
+
+.contact-item a:hover {
+    color: #00aaff;
+}
+
+.social-contact {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.social-contact a {
+    color: #fff;
+    font-size: 3rem;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.social-contact a:hover {
+    color: #00aaff;
+    transform: scale(1.1);
+}
+
+/* ====================
+   Footer
+   obviously hahahahah
+   ==================== */
+footer {
+    background: #111;
+    color: #b0b0b0;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+    font-size: 0.9rem;
+}
